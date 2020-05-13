@@ -2,118 +2,17 @@
     <img src="android/res/mipmap-xxxhdpi/ic_launcher.png">
 </p>
 
-# Stellarium-android
-A modded version of Stellarium-Mobile
+# Stellarium Nusantara
+Versi Stellarium yang dimodifkasi untuk menyuplai paket budaya langit Nusantara Starlore. Digarpu dari [chengxinlun/Stellarium-Mobile](https://github.com/chengxinlun/Stellarium-android).
 
-Fork of [chengxinlun's Stellarium-Mobile](https://github.com/chengxinlun/Stellarium-android)
+* Sumber kode asli dari Noctua Software:<br />http://stelladata.noctua-software.com/stellarium-mobile/stellarium-mobile-1.29.tar.gz 
+* Aset Stellarium:<br />https://code.launchpad.net/stellarium/
 
-Mobile platform specific source code http://stelladata.noctua-software.com/stellarium-mobile/stellarium-mobile-1.29.tar.gz 
-Assets from https://code.launchpad.net/stellarium/
-Note that changes have been made to the source code and assets (mainly use uncompressed PC version assets instead of compressed ones)
+# Fitur 
 
-Copyright: Original Stellarium dev team
-
-## Features
-
-* Extend default star catalog limiting magnitude to 13.5
-* Allow custom configuration files and catalogs (Put them in ```/sdcard/stellarium```. Same file structure to ```mobileData/data```)
-* Tweak UI size for better handling on mobile
-* Correct for magnetic declination angle (Magnetic North is not real North)
-* Higher quality texture compared to official Stellarium-Mobile
-* 2K - 4K - 8K textures from [solarsystemscope.com](https://www.solarsystemscope.com/) distributed under *Attribution 4.0 International (CC BY 4.0)*
-
-## Planned features
-
-- Planets
-    - [X] Draw orbit when selected
-
-- Satellite
-    - [X] Support for Starlink.
-    - [X] Reduced hint sizes, show when visible and magnitude low.
-    - [X] Special yellow color for ISS.
-    - [X] Draw orbit when selected.
-
-- Quasars
-    - [X] Add support for quasars
-    - [X] Online updated
-
-- Exoplanets
-    - [X] Add support for exoplanets
-    - [X] Online updated
-
-- Meteor Showers
-    - [X] Add support for meteors
-    - [X] Online updated
-
-- Telescope Control
-    - [ ] Add support for telescope control
-    - [ ] Edit UI to support it
-
-- UI
-    - [ ] Improve search dialog
-    - [ ] Material themed
-    - [X] Full HD support for planet textures
-
-- Performance
-    - [ ] 30fps stable
-
-## Prerequisites
-
-* Qt-for-android (Known to work on qt-5.11 and 5.12)
-
-Please note that for version ealier than 5.10, API for permission models for Android 6.0+ were not correctly implemented in Qt.
-Notably, Qt did not provide any API for requesting ```read/write to external storage``` permission. This permission is essential
-to the application.
-
-## Building APK
-
-Set up android SDK and NDK, and environment in QtCreator.
-Open ```stellarium.pro``` in QtCreator.
-Push the Build button.
-
-If the building process runs into problems while compiling ```dummy.cpp```, simply copy the file to build directory and rename it ```moc_predefs.h```.
-
-## Using a release
-
-**! Important !**
-If updating from a previous release do not forget to delete the *stellarium* folder present in your internal storage.
-
-See the lastest releases from the [releases page](https://github.com/raymas/Stellarium-android/releases)
-
-## Localization guide
-
-TODO
-
-## Change Log
-
-### January 2, 2020
-
-Starlink magnitude updated. 2K and 8K support for major celestial bodies. Newline correction for Quasars, Exoplanets and MeteoShowers informations.
-
-### June 2, 2019
-
-Upgrading Main app and texture manager to implement QtConcurrent and Thread for increases speed.
-Not enough fast.
-
-### June 1, 2019
-
-Editing Satellite module for better visualization
-Adding support for Quasars and Exoplanets
-
-### April 3, 2019
-
-Update to mobile source code to 1.29.6
-Clean up unused files
-
-### June 21, 2018
-
-Android 8.0 support
-Runtime permission request
-
-### May 4, 2017
-
-New feature: magnetic declination correction
-
-### February 20, 2017
-
-Minor bug fix
+* Memperluas standar pembatasan magnitudo bintang ke 13.5 mag
+* Mengizinkan konfigurasi kustom dan bebas (Taruh di ```/sdcard/stellarium``` sebagaimana struktur yang sama seperti ```mobileData/data```)
+* Mengubah penyesuaian UI untuk penanganan lebih baik di ponsel
+* Koreksi untuk sduktu deklinasi magnet (Utara Magnet tidak sama dengan Utara Sebenarnya)
+* Tekstur yang berkualitas dari Stellarium Mobile resmi
+* Tekstur 2K - 4K - 8K dari [solarsystemscope.com](https://www.solarsystemscope.com/) didistribusikan dibawah lisensi *(CC BY 4.0)*
